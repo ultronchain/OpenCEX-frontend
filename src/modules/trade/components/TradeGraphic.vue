@@ -534,11 +534,16 @@ export default {
           lineStyle: 0,
         },
         editorFontsList: {
-          0: "Verdana",
-          1: "Courier New",
-          2: "Times New Roman",
-          3: "Arial",
+          0: "Roboto",
+          1: "IBM Plex Mono",
+          2: "Georgia Pro",
+          3: "Inter",
+          4: "Merriweather",
+          5: "PT Serif",
+          6: "Source Sans Pro",
+          7: "JetBrains Mono",
         },
+
         volumePaneSize: "large",
       };
       try {
