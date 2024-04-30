@@ -1,9 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
 input[type="text"]::-webkit-input-placeholder {color: #ccc;}
 input[type="text"]::-moz-placeholder          {color: #ccc;}
 input[type="text"]:-moz-placeholder           {color: #ccc;}
 input[type="text"]:-ms-input-placeholder      {color: #ccc;}
+
+:root {
+  --theme-primary-color: #1a202c;
+  --theme-secondary-color: #2d3748;
+  --theme-accent-color: #48bb78;
+  --theme-neutral-color: #e2e8f0;
+  --theme-background-color: #f7fafc;
+}
 
 h2 {
   font-weight: 700;
@@ -260,7 +268,7 @@ img {
 }
 .header__ether-info {
   font-size: 14px;
-  font-family: "Open Sans", arial, sans-serif;
+  font-family: "Inter", sans-serif;
   color: white;
   line-height: 1.2;
 }
@@ -313,7 +321,7 @@ img {
 }
 .middle-list__title {
   font-size: 14px;
-  font-family: "Open Sans", arial, sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: bold;
   color: white;
   line-height: 1.2;
@@ -333,7 +341,7 @@ img {
 /*  AUTHOR LIST */
 /*TODO: вынесем в компонент */
 .author-list {
-  font-family: "Open Sans", arial, sans-serif;
+  font-family: "Inter", sans-serif;
   min-width: 140px;
   position: absolute;
   background-color: #fff;
@@ -490,7 +498,7 @@ img {
 .burger__text {
   color: #fff;
   font-size: 14px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: bold;
   text-transform: initial;
   line-height: 1.2;
@@ -504,7 +512,7 @@ img {
 }
 .navigation {
   position: absolute;
-  font-family: "Open Sans", arial, sans-serif;
+  font-family: "Inter", sans-serif;
   min-width: 210px;
   background-color: #fff;
   top: 40px;
@@ -683,7 +691,7 @@ img {
 .burger__text {
   color: #ffffff;
   font-size: 14px;
-  font-family: "Open Sans", arial, sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   line-height: 1.2;
@@ -722,34 +730,28 @@ img {
   font-weight: 400;
 }
 
+/* General hover effect for lists */
 .currency-list:hover,
 .wallet-list:hover {
-  -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
+/* Active and focused nav items */
 .currency-list .nav-tabs .nav-item.show .nav-link,
 .currency-list .nav-tabs .nav-link.active,
 .wallet-list .nav-tabs .nav-item.show .nav-link,
 .wallet-list .nav-tabs .nav-link.active {
-  border-bottom: 2px solid var(--theme-primary-color);
+  border-bottom: 3px solid var(--theme-primary-color);
   font-weight: bold;
 }
 
+/* Nav tabs styling */
 .currency-list .nav-tabs,
 .wallet-list .nav-tabs {
   background-color: #fff;
   border-bottom: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
 }
 
@@ -757,48 +759,41 @@ img {
   justify-content: flex-start;
 }
 
-.currency-list .nav-tabs .nav-item {
-  margin-right: 10px;
-}
-
 .currency-list .nav-tabs .nav-item,
 .wallet-list .nav-tabs .nav-item {
   background-color: #fff;
-}
-
-.currency-list .nav-tabs .nav-item,
-.wallet-list .nav-tabs .nav-item {
+  margin-right: 10px;
   margin-bottom: 0;
 }
 
+/* Nav links styling */
 .currency-list .nav-tabs .nav-link,
 .wallet-list .nav-tabs .nav-link {
   border: none;
-  color: #c0c0c2;
+  color: #606060; /* Darker color for better legibility */
   font-size: 14px;
-  display: block;
-  font-family: "Open Sans", arial, sans-serif;
+  font-family: "Inter", sans-serif;
   padding: 10px 1rem;
   text-transform: uppercase;
 }
 
-.currency-list .tab-pane__row,
-.wallet-list .tab-pane__row {
-  position: relative;
-}
-
+/* Search input styling */
 .currency-list .tab-pane__search,
 .wallet-list .tab-pane__search {
-  background: url("/public/img/searchicon.png") no-repeat 15px center;
-  border: none;
+  background: url("/public/img/searchicon.png") no-repeat 10px center / 20px 20px, #e8e8e8; /* Lighter background */
+  border: 2px solid #b0b0b0; /* Softer border */
   font-size: 14px;
-  font-family: "Open Sans", arial, sans-serif;
-  width: 100%;
-  height: 37px;
-  padding: 5px 40px 5px;
-  border-radius: 0;
+  font-family: "Inter", sans-serif;
+  width: 90%;
+  height: 30px;
+  padding-left: 40px;
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 10px auto; /* Added top and bottom margin */
+  display: block;
 }
 
+/* Icon adjustments */
 .currency-list .tab-pane__icon,
 .wallet-list .tab-pane__icon {
   color: #fec969;
@@ -806,26 +801,14 @@ img {
   position: absolute;
   right: 5px;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
+/* Currency table adjustments */
 .currency-list .currency-table,
 .wallet-list .currency-table {
   margin-top: 0;
-  -webkit-box-shadow: unset;
-  box-shadow: unset;
-}
-
-.currency-list .currency-table__name,
-.currency-list .currency-table__fullname,
-.wallet-list .currency-table__name,
-.wallet-list .currency-table__fullname {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 100%;
-  -ms-flex: 0 0 100%;
-  flex: 0 0 100%;
+  box-shadow: none;
 }
 
 .currency-list .currency-table__name,
@@ -833,86 +816,57 @@ img {
   font-weight: bold;
   font-size: 14px;
   display: block;
-  font-family: "Open Sans", arial, sans-serif;
+  font-family: "Inter", sans-serif;
   text-transform: uppercase;
 }
 
 .currency-list .currency-table__fullname,
 .wallet-list .currency-table__fullname {
-  color: #c0c0c2;
+  color: #909090; /* Lightened for subtlety */
   font-size: 12px;
-  font-family: "Open Sans", arial, sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
+/* Table content styling */
 .currency-list .currency-table__td,
 .wallet-list .currency-table__td {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 100%;
   height: 32px;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
   font-size: 12px;
-  font-family: "Open Sans", arial, sans-serif;
+  font-family: "Inter", sans-serif;
   line-height: 1.25;
 }
 
-.currency-list .currency-table .percent,
-.wallet-list .currency-table .percent {
-  display: inline-block;
-  font-weight: bold;
-}
-
+/* Percent colors */
 .currency-list .currency-table .percent-red,
 .wallet-list .currency-table .percent-red {
-  color: #d93d47;
+  color: #d93d47; /* For negative changes */
 }
 
 .currency-list .currency-table .percent-green,
 .wallet-list .currency-table .percent-green {
-  color: #53c599;
+  color: #53c599; /* For positive changes */
 }
 
+/* Adjustment for order cells */
 .currency-list .currency-table .table thead tr td .sell-orders__td,
 .wallet-list .currency-table .table thead tr td .sell-orders__td {
-  height: 32px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.currency-list .currency-table .table thead tr td:nth-of-type(n + 3) .sell-orders__td,
-.wallet-list .currency-table .table thead tr td:nth-of-type(n + 3) .sell-orders__td {
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
   justify-content: flex-end;
 }
 
 .currency-list .currency-table .table tbody td:first-child,
 .wallet-list .currency-table .table tbody td:first-child {
-  max-width: 30px;
+  max-width: 30px; /* Limit width for consistency */
 }
 
 .currency-list .currency-table .table tbody td:nth-of-type(n + 3) .currency-table__td,
 .wallet-list .currency-table .table tbody td:nth-of-type(n + 3) .currency-table__td {
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  justify-content: flex-end; /* Align content to the right */
 }
+
 
 .plate-back {
   font-size: 22px;
@@ -991,7 +945,7 @@ img {
   color: #c0c0c2;
   font-size: 14px;
   display: block;
-  font-family: "Open Sans", arial, sans-serif;
+  font-family: "Inter", sans-serif;
   padding: 10px 1rem;
   text-transform: uppercase;
 }
@@ -1003,7 +957,7 @@ img {
 .wallet-list .tab-pane__search {
   border: none;
   font-size: 14px;
-  font-family: "Open Sans", arial, sans-serif;
+  font-family: "Inter", sans-serif;
   width: 100%;
   height: 37px;
   padding: 5px 30px 5px;
@@ -1026,7 +980,7 @@ img {
 
 .wallet-list .wallet-table__td {
   font-size: 14px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   height: 32px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1205,7 +1159,7 @@ img {
 .total__rating {
   display: inline-block;
   font-size: 22px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   color: #35a462;
   line-height: 1.136;
   white-space: nowrap;
@@ -1376,7 +1330,7 @@ thead .sell-orders__td b {
   border-radius: 3px;
   color: #ffffff;
   font-weight: bold;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   display: inline-block;
   padding: 5px 10px;
   white-space: nowrap;
@@ -1388,7 +1342,7 @@ thead .sell-orders__td b {
   border-radius: 3px;
   color: #ffffff;
   font-weight: bold;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   display: inline-block;
   font-size: 12px;
   margin-right: 3px;
@@ -1406,7 +1360,7 @@ thead .sell-orders__td b {
   border-radius: 3px;
   color: #ffffff;
   font-weight: bold;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   display: inline-block;
   padding: 5px 10px;
 }
@@ -1500,7 +1454,7 @@ thead .sell-orders__td b {
 
 .footer-list__link {
   color: white;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
   display: block;
   padding-bottom: 1rem;
@@ -1542,7 +1496,7 @@ thead .sell-orders__td b {
 }
 
 html {
-  font-family: "Open Sans", arial, sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   height: 100%;
 }
@@ -2321,7 +2275,7 @@ button:active {
 
 .wallet__title {
   padding-left: 30px;
-  font-family: "Open Sans", arial, sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 22px;
   font-weight: 700;
   -webkit-flex-basis: 50%;
@@ -3151,7 +3105,7 @@ button {
   padding-left: 16px;
   padding-bottom: 11px;
   padding-top: 11px;
-  font-family: "Open Sans", arial, sans-serif;
+  font-family: "Inter", sans-serif;
   border-bottom: 1px solid #dadada;
 }
 
@@ -3413,7 +3367,7 @@ input[type="password"].logIn__form__input::placeholder {
 }
 
 .p-main {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   overflow: hidden;
 }
 
@@ -3443,7 +3397,7 @@ input[type="password"].logIn__form__input::placeholder {
 }
 
 .p-main .left button {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 40px;
@@ -3470,7 +3424,7 @@ input[type="password"].logIn__form__input::placeholder {
 }
 
 .btc-chart {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   padding-top: 75px;
 }
 
@@ -3500,7 +3454,7 @@ input[type="password"].logIn__form__input::placeholder {
 
 .service-list {
   background-color: #f2f6f9;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   padding: 80px 0;
   text-align: center;
 }
@@ -3544,7 +3498,7 @@ input[type="password"].logIn__form__input::placeholder {
 
 .exchange-stat {
   background-color: #36373c;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   padding: 23px 0 28px 0;
   text-align: center;
 }
@@ -3725,7 +3679,7 @@ main-new {
 }
 
 .exchange-main {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   overflow: hidden;
 }
 
@@ -3754,7 +3708,7 @@ main-new {
 }
 
 .exchange-main .left button {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 40px;
@@ -3829,7 +3783,7 @@ main-new {
 }
 
 .pop-learn button {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 40px;
@@ -3859,7 +3813,7 @@ main-new {
 
 .service-list {
   background-color: #f2f6f9;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   padding: 80px 0;
   text-align: center;
 }
@@ -3903,7 +3857,7 @@ main-new {
 
 .exchange-stat {
   background-color: #ffffff;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   padding: 23px 0 28px 0;
   text-align: center;
 }
@@ -3933,7 +3887,7 @@ main-new {
 }
 
 .btc-chart {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   padding-top: 75px;
 }
 
@@ -4575,7 +4529,7 @@ iframe.wizard {
 }
 
 .tab-block__nav-link {
-  font-family: "Open Sans", arial, sans-serif;
+  font-family: "Inter", sans-serif;
   border: none;
   color: #c0c0c2;
   font-size: 13px;

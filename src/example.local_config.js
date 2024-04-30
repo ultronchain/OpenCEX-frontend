@@ -22,30 +22,30 @@ const localConfig = {
   logo: "${LOGO}",
   themes: [
     {
-      main_color: "#2A2259",
-      second_color: "#ffac2a",
-      cancel_color: "#d93d47",
-      login_background: "#36373c",
+      main_color: "#333333", // Soft dark grey, less intense
+      second_color: "#0056B3", // Softer blue, less bright
+      cancel_color: "#D32F2F", // Soft red for less intensity
+      login_background: "#424242", // Darker shade for less eye strain
       login_text: "white",
-      main_background: "#edf1fa",
-      main_text: "#2a2259",
+      main_background: "#E3E3E4", // Very soft light grey, not harsh on the eyes
+      main_text: "#333333",
       input_color: "white",
-      input_text: "#2a2259",
+      input_text: "#333333",
       block_color: "white",
-      border_color: "#f0f0f0",
+      border_color: "#BDBDBD", // Lighter grey borders
     },
     {
-      main_color: "#2A2259",
-      second_color: "#ffac2a",
-      cancel_color: "#d93d47",
-      login_background: "#36373c",
+      main_color: "#1E1E1E", // Consistent dark grey for primary elements
+      second_color: "#007AFF", // Consistent bright blue for secondary elements
+      cancel_color: "#FF3B30", // Consistent red for negative actions
+      login_background: "#202020", // Slightly darker for alternative theme
       login_text: "white",
-      main_background: "#171717",
-      main_text: "#888888",
-      input_color: "#242424",
-      input_text: "#888888",
-      block_color: "#242424",
-      border_color: "#353535",
+      main_background: "#121212", // Very dark grey for deep contrast mode
+      main_text: "#CCCCCC", // Lighter grey text for visibility on dark backgrounds
+      input_color: "#333333", // Dark inputs for a deep theme
+      input_text: "#CCCCCC",
+      block_color: "#333333",
+      border_color: "#424242",
     },
   ],
   socials: {

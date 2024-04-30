@@ -1612,7 +1612,7 @@ const common = {
       6: "Su",
     },
     copyright: "{title}. Cryptocurrency Platform",
-    built_by: "Built using OpenCEX platform by Polygant",
+    built_by: "",
     password_upper: "At least one uppercase letter",
     password_lower: "At least one lowercase letter",
     password_number: "At least one number",

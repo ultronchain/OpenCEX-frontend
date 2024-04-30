@@ -103,7 +103,7 @@ export default {
         tvWidget = new widget({
           symbol: this.baseCurrency + "/" + this.quoteCurrency,
           interval: intervalFromLocalStorage,
-          timezone: "Etc/UTC",
+          timezone: "UTC",
           container: this.$refs.graphic,
           locale: this.lang,
           datafeed: this.datafeed,
@@ -111,16 +111,11 @@ export default {
           autosize: true,
           toolbar_bg: "#f6f6f8",
           disabled_features: [
-            "left_toolbar",
             "header_symbol_search",
-            "header_indicators",
             "header_compare",
             "header_undo_redo",
             "header_interval_dialog_button",
             "show_interval_dialog_on_key_press",
-            "header_fullscreen_button",
-            "timeframes_toolbar",
-            "context_menus",
           ],
         });
 
@@ -138,12 +133,12 @@ export default {
     },
     setGraphColor() {
       let graphTheme = {
-        timezone: "Etc/UTC",
+        timezone: "UTC",
         priceScaleSelectionStrategyName: "auto",
         dataWindowProperties: {
           background: this.blockColorLocal,
           border: "rgba( 96, 96, 144, 1)",
-          font: "Verdana",
+          font: "Helvetica",
           fontBold: false,
           fontItalic: false,
           fontSize: 10,
